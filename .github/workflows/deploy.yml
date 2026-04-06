@@ -12,12 +12,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          protocol: ftps
-          security: loose
-          local-dir: ./html/
-          server-dir: /httpdocs/
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          lftp -e "
+            set ftp:ssl-allow yes;
+            set ssl:verify-certificate no;
+            set ftp:passive-mode yes;
+            mirror --reverse --delete --verbose ./html/ /httpdocs/;
+            quit;
+          " -u "${{ secrets.FTP_USER }},${{ secrets.FTP_PASS }}" "${{ secrets.FTP_HOST }}"
