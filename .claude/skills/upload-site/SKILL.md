@@ -13,7 +13,7 @@ Sube todos los archivos del directorio `html/` al servidor de producción por FT
 - **Host:** 185.18.197.22
 - **Usuario:** wow26
 - **Contraseña:** CornerstoneWow26!
-- **Directorio remoto:** /wow/
+- **Directorio remoto:** /httpdocs/
 
 ## Proceso
 
@@ -26,7 +26,7 @@ Sube todos los archivos del directorio `html/` al servidor de producción por FT
 Para cada archivo encontrado en `html/`, subirlo con curl preservando la ruta relativa:
 
 ```bash
-curl -s --ftp-pasv --ftp-create-dirs -T "<archivo_local>" "ftp://185.18.197.22/wow/<ruta_relativa>/" --user "wow26:CornerstoneWow26!"
+curl -s --ftp-pasv --ftp-create-dirs -T "<archivo_local>" "ftp://185.18.197.22/httpdocs/<ruta_relativa>/" --user "wow26:CornerstoneWow26!"
 ```
 
 Ejecutar las subidas en paralelo cuando sea posible para optimizar el tiempo.
@@ -36,5 +36,5 @@ Ejecutar las subidas en paralelo cuando sea posible para optimizar el tiempo.
 Listar el directorio remoto para confirmar:
 
 ```bash
-curl -s --list-only --ftp-pasv "ftp://185.18.197.22/wow/" --user "wow26:CornerstoneWow26!"
+curl -s --list-only --ftp-pasv "ftp://185.18.197.22/httpdocs/" --user "wow26:CornerstoneWow26!"
 ```

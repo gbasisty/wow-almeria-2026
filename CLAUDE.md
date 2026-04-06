@@ -43,7 +43,7 @@ Abre http://localhost para previsualizar.
 ## Despliegue
 - **Automático:** push a `main` que toque `html/` dispara GitHub Action (`.github/workflows/deploy.yml`) que sube solo los archivos modificados por FTP
 - **Manual:** `/upload-site` para subir todo bajo demanda
-- El contenido de `html/` se sube al directorio remoto `/wow/`
+- El contenido de `html/` se sube al directorio remoto `/httpdocs/`
 - Credenciales FTP almacenadas como GitHub Secrets: `FTP_HOST`, `FTP_USER`, `FTP_PASS`
 
 ## Convenciones
