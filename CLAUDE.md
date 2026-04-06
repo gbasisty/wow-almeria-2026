@@ -14,6 +14,10 @@ Evento cristiano evangélico dirigido a mujeres.
 /
 ├── CLAUDE.md
 ├── README.md
+├── .gitignore
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # GitHub Action: deploy automático por FTP
 ├── .claude/
 │   └── skills/
 │       └── upload-site/    # Skill /upload-site con datos FTP
@@ -28,7 +32,7 @@ Evento cristiano evangélico dirigido a mujeres.
 ```
 
 ## Comandos
-- `/upload-site` — Sube `html/` al servidor FTP de producción (credenciales en `.claude/skills/upload-site/SKILL.md`)
+- `/upload-site` — Sube `html/` al servidor FTP manualmente (credenciales en `.claude/skills/upload-site/SKILL.md`)
 
 ## Servidor local
 ```bash
@@ -37,8 +41,10 @@ cd html && python3 -m http.server 80
 Abre http://localhost para previsualizar.
 
 ## Despliegue
-- El contenido de `html/` se sube tal cual al directorio remoto `/wow/`
-- Siempre subir tras cambios con `/upload-site`
+- **Automático:** push a `main` que toque `html/` dispara GitHub Action (`.github/workflows/deploy.yml`) que sube solo los archivos modificados por FTP
+- **Manual:** `/upload-site` para subir todo bajo demanda
+- El contenido de `html/` se sube al directorio remoto `/wow/`
+- Credenciales FTP almacenadas como GitHub Secrets: `FTP_HOST`, `FTP_USER`, `FTP_PASS`
 
 ## Convenciones
 - Idioma del contenido: **español**
