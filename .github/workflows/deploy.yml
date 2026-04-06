@@ -15,9 +15,10 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq lftp
           lftp -e "
-            set ftp:ssl-allow yes;
-            set ssl:verify-certificate no;
+            set ftp:ssl-allow no;
             set ftp:passive-mode yes;
-            mirror --reverse --delete --verbose ./html/ /httpdocs/;
+            set net:timeout 10;
+            set net:max-retries 3;
+            mirror --reverse --delete --verbose --parallel=2 ./html/ /httpdocs/;
             quit;
-          " -u "${{ secrets.FTP_USER }},${{ secrets.FTP_PASS }}" "${{ secrets.FTP_HOST }}"
+          " -u "${{ secrets.FTP_USER }},${{ secrets.FTP_PASS }}" "ftp://${{ secrets.FTP_HOST }}"
