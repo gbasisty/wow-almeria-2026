@@ -17,5 +17,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
+          protocol: ftps
+          security: loose
           local-dir: ./html/
           server-dir: /httpdocs/
