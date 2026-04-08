@@ -369,6 +369,26 @@ ul {
   color: #777;
 }
 
+.schedule__item--featured {
+  background: linear-gradient(135deg, rgba(91, 42, 110, 0.04), rgba(201, 168, 76, 0.06));
+  border-radius: 10px;
+  padding: 1.2rem 1.2rem;
+  border-bottom: none;
+  margin-bottom: 0.5rem;
+  border-left: 3px solid var(--gold);
+}
+
+.schedule__item--featured .schedule__info h4 {
+  color: var(--purple-dark);
+  font-size: 1.1rem;
+}
+
+.schedule__item--featured .schedule__info p {
+  color: var(--purple-light);
+  font-weight: 600;
+  font-style: italic;
+}
+
 /* ---------- Oradoras ---------- */
 .speakers {
   padding: var(--section-padding);
