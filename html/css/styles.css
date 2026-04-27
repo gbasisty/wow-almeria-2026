@@ -133,6 +133,10 @@ ul {
   align-items: center;
 }
 
+.navbar__links li {
+  white-space: nowrap;
+}
+
 .navbar__logo {
   font-family: var(--font-heading);
   font-size: 1.6rem;
@@ -164,6 +168,51 @@ ul {
 
 .navbar__links a:hover {
   color: var(--gold);
+}
+
+/* Language switcher */
+.lang-switch {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.lang-switch__btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 0.15rem 0.5rem;
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  border-radius: 999px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.lang-switch__btn:hover {
+  color: var(--gold);
+}
+
+.lang-switch__btn.is-active {
+  color: var(--purple-dark);
+  background: var(--gold);
+}
+
+.lang-switch__sep {
+  color: rgba(255, 255, 255, 0.35);
+  user-select: none;
 }
 
 .navbar__toggle {

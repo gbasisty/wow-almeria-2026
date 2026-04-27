@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=2026-04-27e" />
+  <link rel="stylesheet" href="css/styles.css?v=2026-04-27i" />
 </head>
 <body>
 
@@ -21,56 +21,61 @@
       <a href="#" class="navbar__logo">WOW <span>Almería</span></a>
 
       <ul class="navbar__links">
-        <li><a href="#about">Acerca de</a></li>
-        <li><a href="#schedule">Programa</a></li>
-        <li><a href="#speakers">Oradoras</a></li>
-        <li><a href="#location">Ubicación</a></li>
-        <li><a href="#hotel">Alojamiento</a></li>
-        <li><a href="#register" class="btn btn--primary">Inscríbete</a></li>
+        <li><a href="#about" data-i18n="nav.about">Acerca de</a></li>
+        <li><a href="#schedule" data-i18n="nav.schedule">Programa</a></li>
+        <li><a href="#speakers" data-i18n="nav.speakers">Oradoras</a></li>
+        <li><a href="#location" data-i18n="nav.location">Ubicación</a></li>
+        <li><a href="#hotel" data-i18n="nav.hotel">Alojamiento</a></li>
+        <li><a href="#register" class="btn btn--primary" data-i18n="nav.register">Inscríbete</a></li>
       </ul>
 
-      <button class="navbar__toggle" aria-label="Abrir menú">
+      <button class="navbar__toggle" aria-label="Abrir menú" data-i18n-aria-label="nav.toggle_aria">
         <span></span><span></span><span></span>
       </button>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" class="lang-switch__btn" data-lang="es" aria-pressed="true">ES</button>
+      <span class="lang-switch__sep" aria-hidden="true">/</span>
+      <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
     </div>
   </nav>
 
   <!-- ========== HERO ========== -->
   <header class="hero" id="hero">
     <div class="hero__content">
-      <p class="hero__overline">Conferencia de Mujeres</p>
+      <p class="hero__overline" data-i18n="hero.overline">Conferencia de Mujeres</p>
       <h1 class="hero__title">WOW</h1>
-      <p class="hero__meaning">Mujeres en Libertad</p>
+      <p class="hero__meaning" data-i18n="hero.meaning">Mujeres en Libertad</p>
       <p class="hero__verse">
-        «Porque el Señor da la sabiduría; de su boca viene el conocimiento y la inteligencia.»
-        <br />— Proverbios 2:6
+        <span data-i18n="hero.verse">«Porque el Señor da la sabiduría; de su boca viene el conocimiento y la inteligencia.»</span>
+        <br /><span data-i18n="hero.verse_ref">— Proverbios 2:6</span>
       </p>
       <div class="hero__buttons">
-        <a href="#register" class="btn btn--primary">Reserva tu lugar</a>
-        <a href="#about" class="btn btn--outline">Saber más</a>
+        <a href="#register" class="btn btn--primary" data-i18n="hero.cta_register">Reserva tu lugar</a>
+        <a href="#about" class="btn btn--outline" data-i18n="hero.cta_about">Saber más</a>
       </div>
-      <p class="hero__date"><strong>25–26 Septiembre 2026</strong> &middot; Almería, España</p>
+      <p class="hero__date"><strong data-i18n="hero.date">25–26 Septiembre 2026</strong> &middot; <span data-i18n="hero.location_short">Almería, España</span></p>
     </div>
   </header>
 
   <!-- ========== ACERCA DE ========== -->
   <section class="about" id="about">
     <div class="container">
-      <h2 class="section-title">Acerca del Evento</h2>
-      <p class="section-subtitle">Un encuentro para crecer en fe, sabiduría y comunidad</p>
+      <h2 class="section-title" data-i18n="about.title">Acerca del Evento</h2>
+      <p class="section-subtitle" data-i18n="about.subtitle">Un encuentro para crecer en fe, sabiduría y comunidad</p>
 
       <div class="about__grid">
-        <img class="about__image" src="assets/images/wow.jpeg" alt="Mujeres en Libertad — WOW Almería 2026" style="object-fit: cover;" />
+        <img class="about__image" src="assets/images/wow.jpeg" alt="Mujeres en Libertad — WOW Almería 2026" data-i18n-alt="about.image_alt" style="object-fit: cover;" />
         <div class="about__text">
-          <h3>¡Llamada a todas las mujeres a través de las generaciones!</h3>
-          <p>
+          <h3 data-i18n="about.heading">¡Llamada a todas las mujeres a través de las generaciones!</h3>
+          <p data-i18n-html="about.p1_html">
             Únete a este viaje de fe, empoderamiento y propósito en la Conferencia WOW 2026.
             El tema de este año es <strong>«Coronadas con Propósito»</strong>, tomado de Isaías 62:3:
           </p>
-          <p style="font-style: italic; color: var(--purple); border-left: 3px solid var(--gold); padding-left: 1rem;">
+          <p style="font-style: italic; color: var(--purple); border-left: 3px solid var(--gold); padding-left: 1rem;" data-i18n="about.quote">
             «Serás también corona de gloria en la mano del Señor, y diadema real en la mano de tu Dios.»
           </p>
-          <p>
+          <p data-i18n="about.p2">
             Una corona es símbolo de realeza, autoridad, poder, victoria, estatus, liderazgo y gloria.
             La casa de Dios es el lugar donde cada mujer descubre su verdadera identidad y propósito.
           </p>
@@ -78,15 +83,15 @@
           <div class="about__highlights">
             <div>
               <span>3</span>
-              <small>Días</small>
+              <small data-i18n="about.h_days">Días</small>
             </div>
             <div>
               <span>9</span>
-              <small>Ponencias</small>
+              <small data-i18n="about.h_talks">Ponencias</small>
             </div>
             <div>
               <span>300+</span>
-              <small>Mujeres</small>
+              <small data-i18n="about.h_women">Mujeres</small>
             </div>
           </div>
         </div>
@@ -97,139 +102,139 @@
   <!-- ========== PROGRAMA ========== -->
   <section class="schedule" id="schedule">
     <div class="container">
-      <h2 class="section-title">Programa</h2>
-      <p class="section-subtitle">24 de septiembre (pre-evento) · 25 y 26 de septiembre (conferencia)</p>
+      <h2 class="section-title" data-i18n="schedule.title">Programa</h2>
+      <p class="section-subtitle" data-i18n="schedule.subtitle">24 de septiembre (pre-evento) · 25 y 26 de septiembre (conferencia)</p>
 
       <div class="schedule__timeline">
-        <!-- Día 1 -->
-        <h3 style="font-family: var(--font-heading); color: var(--purple); margin-bottom: 1rem;">Pre-evento — Jueves 24 de septiembre</h3>
+        <!-- Pre-evento -->
+        <h3 style="font-family: var(--font-heading); color: var(--purple); margin-bottom: 1rem;" data-i18n="schedule.preevent_heading">Pre-evento — Jueves 24 de septiembre</h3>
         <div class="schedule__item">
           <div class="schedule__time">17:00</div>
           <div class="schedule__info">
-            <h4>Inscripciones</h4>
-            <p>Registro y acreditación de asistentes</p>
+            <h4 data-i18n="schedule.registration_h">Inscripciones</h4>
+            <p data-i18n="schedule.registration_p">Registro y acreditación de asistentes</p>
           </div>
         </div>
         <div class="schedule__item">
           <div class="schedule__time">18:30</div>
           <div class="schedule__info">
-            <h4>Reunión de Bienvenida</h4>
-            <p>Apertura oficial del WOW Conference 2026</p>
+            <h4 data-i18n="schedule.welcome_h">Reunión de Bienvenida</h4>
+            <p data-i18n="schedule.welcome_p">Apertura oficial del WOW Conference 2026</p>
           </div>
         </div>
         <div class="schedule__item schedule__item--featured">
           <div class="schedule__time">19:00</div>
           <div class="schedule__info">
-            <h4>Plenaria</h4>
+            <h4 data-i18n="schedule.plenary_h">Plenaria</h4>
             <p>Ps. Daphne Yang</p>
           </div>
         </div>
         <div class="schedule__item">
           <div class="schedule__time">20:00</div>
           <div class="schedule__info">
-            <h4>Despedida</h4>
-            <p>Cierre de la primera jornada</p>
+            <h4 data-i18n="schedule.farewell_h">Despedida</h4>
+            <p data-i18n="schedule.farewell_p">Cierre de la primera jornada</p>
           </div>
         </div>
 
         <!-- Día 1 -->
-        <h3 style="font-family: var(--font-heading); color: var(--purple); margin: 2rem 0 1rem;">Día 1 — Viernes 25 de septiembre</h3>
+        <h3 style="font-family: var(--font-heading); color: var(--purple); margin: 2rem 0 1rem;" data-i18n="schedule.day1_heading">Día 1 — Viernes 25 de septiembre</h3>
         <div class="schedule__item schedule__item--featured">
           <div class="schedule__time">10:00</div>
           <div class="schedule__info">
-            <h4>Sesión 1</h4>
+            <h4 data-i18n="schedule.session1_h">Sesión 1</h4>
             <p>Rev. Celia Apeagyei-Collins</p>
           </div>
         </div>
         <div class="schedule__item">
           <div class="schedule__time">11:30</div>
           <div class="schedule__info">
-            <h4>Pausa</h4>
-            <p>Café y refrigerio</p>
+            <h4 data-i18n="schedule.break_h">Pausa</h4>
+            <p data-i18n="schedule.break_p">Café y refrigerio</p>
           </div>
         </div>
         <div class="schedule__item schedule__item--featured">
           <div class="schedule__time">12:00</div>
           <div class="schedule__info">
-            <h4>Sesión 2</h4>
+            <h4 data-i18n="schedule.session2_h">Sesión 2</h4>
             <p>Rev. Celia Apeagyei-Collins</p>
           </div>
         </div>
         <div class="schedule__item">
           <div class="schedule__time">13:30</div>
           <div class="schedule__info">
-            <h4>Pausa para almuerzo</h4>
-            <p>Libre</p>
+            <h4 data-i18n="schedule.lunch_h">Pausa para almuerzo</h4>
+            <p data-i18n="schedule.lunch_p">Libre</p>
           </div>
         </div>
         <div class="schedule__item schedule__item--featured">
           <div class="schedule__time">18:00</div>
           <div class="schedule__info">
-            <h4>Reunión Nocturna Abierta</h4>
-            <p>Ps. Daphne Yang · Abierto a todos</p>
+            <h4 data-i18n="schedule.evening_h">Reunión Nocturna Abierta</h4>
+            <p data-i18n="schedule.evening_p">Ps. Daphne Yang · Abierto a todos</p>
           </div>
         </div>
         <div class="schedule__item">
           <div class="schedule__time">20:00</div>
           <div class="schedule__info">
-            <h4>Fin del Día 1</h4>
+            <h4 data-i18n="schedule.endday1_h">Fin del Día 1</h4>
             <p>&nbsp;</p>
           </div>
         </div>
 
         <!-- Día 2 -->
-        <h3 style="font-family: var(--font-heading); color: var(--purple); margin: 2rem 0 1rem;">Día 2 — Sábado 26 de septiembre</h3>
+        <h3 style="font-family: var(--font-heading); color: var(--purple); margin: 2rem 0 1rem;" data-i18n="schedule.day2_heading">Día 2 — Sábado 26 de septiembre</h3>
         <div class="schedule__item schedule__item--featured">
           <div class="schedule__time">10:00</div>
           <div class="schedule__info">
-            <h4>Sesión 3</h4>
+            <h4 data-i18n="schedule.session3_h">Sesión 3</h4>
             <p>Ps. Juliette Medina Maury</p>
           </div>
         </div>
         <div class="schedule__item">
           <div class="schedule__time">11:30</div>
           <div class="schedule__info">
-            <h4>Pausa</h4>
-            <p>Café y refrigerio</p>
+            <h4 data-i18n="schedule.break_h">Pausa</h4>
+            <p data-i18n="schedule.break_p">Café y refrigerio</p>
           </div>
         </div>
         <div class="schedule__item schedule__item--featured">
           <div class="schedule__time">12:00</div>
           <div class="schedule__info">
-            <h4>Sesión 4</h4>
+            <h4 data-i18n="schedule.session4_h">Sesión 4</h4>
             <p>Ps. Juliette Medina Maury</p>
           </div>
         </div>
         <div class="schedule__item">
           <div class="schedule__time">13:30</div>
           <div class="schedule__info">
-            <h4>Pausa para almuerzo</h4>
-            <p>Libre</p>
+            <h4 data-i18n="schedule.lunch_h">Pausa para almuerzo</h4>
+            <p data-i18n="schedule.lunch_p">Libre</p>
           </div>
         </div>
         <div class="schedule__item schedule__item--featured">
           <div class="schedule__time">18:00</div>
           <div class="schedule__info">
-            <h4>Reunión Nocturna Abierta</h4>
-            <p>Ps. Daphne Yang · Abierto a todos</p>
+            <h4 data-i18n="schedule.evening_h">Reunión Nocturna Abierta</h4>
+            <p data-i18n="schedule.evening_p">Ps. Daphne Yang · Abierto a todos</p>
           </div>
         </div>
         <div class="schedule__item">
           <div class="schedule__time">20:00</div>
           <div class="schedule__info">
-            <h4>Fin de la Conferencia</h4>
+            <h4 data-i18n="schedule.endconf_h">Fin de la Conferencia</h4>
             <p>&nbsp;</p>
           </div>
         </div>
 
         <!-- Culto especial -->
-        <h3 style="font-family: var(--font-heading); color: var(--purple-light); margin: 2rem 0 0.5rem;">Domingo 27 de septiembre</h3>
-        <p style="font-size: 0.85rem; color: #999; margin-bottom: 1rem; font-style: italic;">Fuera del programa oficial del WOW Conference</p>
+        <h3 style="font-family: var(--font-heading); color: var(--purple-light); margin: 2rem 0 0.5rem;" data-i18n="schedule.sunday_heading">Domingo 27 de septiembre</h3>
+        <p style="font-size: 0.85rem; color: #999; margin-bottom: 1rem; font-style: italic;" data-i18n="schedule.unofficial_note">Fuera del programa oficial del WOW Conference</p>
         <div class="schedule__item">
           <div class="schedule__time">11:00</div>
           <div class="schedule__info">
-            <h4>Culto de Celebración</h4>
-            <p>Rev. Celia Apeagyei-Collins · Ps. Daphne Yang · Abierto a todos</p>
+            <h4 data-i18n="schedule.celebration_h">Culto de Celebración</h4>
+            <p data-i18n="schedule.celebration_p">Rev. Celia Apeagyei-Collins · Ps. Daphne Yang · Abierto a todos</p>
           </div>
         </div>
       </div>
@@ -239,24 +244,24 @@
   <!-- ========== ORADORAS ========== -->
   <section class="speakers" id="speakers">
     <div class="container">
-      <h2 class="section-title">Oradoras</h2>
-      <p class="section-subtitle">Mujeres de Dios que compartirán su mensaje</p>
+      <h2 class="section-title" data-i18n="speakers.title">Oradoras</h2>
+      <p class="section-subtitle" data-i18n="speakers.subtitle">Mujeres de Dios que compartirán su mensaje</p>
 
       <div class="speakers__grid">
         <div class="speaker-card">
-          <img class="speaker-card__photo" src="assets/images/daphne_yang.avif" alt="Pastora Daphne Yang" />
+          <img class="speaker-card__photo" src="assets/images/daphne_yang.avif" alt="Pastora Daphne Yang" data-i18n-alt="speakers.daphne_alt" />
           <h4>Ps. Daphne Yang</h4>
-          <p>Co-fundadora de Cornerstone Community Church en Singapur y creadora de la conferencia WOW (Women of Witness). Con más de 35 años en el ministerio, su pasión es equipar a mujeres de toda nación para vivir con propósito y sabiduría de lo alto.</p>
+          <p data-i18n="speakers.daphne_bio">Co-fundadora de Cornerstone Community Church en Singapur y creadora de la conferencia WOW (Women of Witness). Con más de 35 años en el ministerio, su pasión es equipar a mujeres de toda nación para vivir con propósito y sabiduría de lo alto.</p>
         </div>
         <div class="speaker-card">
           <img class="speaker-card__photo" src="assets/images/celia_apeagyei_collins.jpg" alt="Rev. Celia Apeagyei-Collins" />
           <h4>Rev. Celia Apeagyei-Collins</h4>
-          <p>Reconocida entre las diez mujeres cristianas más influyentes del Reino Unido. Oradora internacional en más de 30 países y fundadora de Rehoboth Foundation, especializada en liderazgo y desarrollo de propósito.</p>
+          <p data-i18n="speakers.celia_bio">Reconocida entre las diez mujeres cristianas más influyentes del Reino Unido. Oradora internacional en más de 30 países y fundadora de Rehoboth Foundation, especializada en liderazgo y desarrollo de propósito.</p>
         </div>
         <div class="speaker-card">
           <img class="speaker-card__photo" src="assets/images/juliette_medina.jpg" alt="Ps. Juliette Medina Maury" />
           <h4>Ps. Juliette Medina Maury</h4>
-          <p>Pastora local en Almería y anfitriona del WOW Conference 2026.</p>
+          <p data-i18n="speakers.juliette_bio">Pastora local en Almería y anfitriona del WOW Conference 2026.</p>
         </div>
       </div>
     </div>
@@ -265,8 +270,8 @@
   <!-- ========== UBICACIÓN ========== -->
   <section class="location" id="location">
     <div class="container">
-      <h2 class="section-title">Ubicación</h2>
-      <p class="section-subtitle">Nos encontramos en Almería</p>
+      <h2 class="section-title" data-i18n="location.title">Ubicación</h2>
+      <p class="section-subtitle" data-i18n="location.subtitle">Nos encontramos en Almería</p>
 
       <div class="location__grid">
         <div class="location__map">
@@ -280,19 +285,19 @@
         </div>
 
         <div class="location__details">
-          <h3>Palacio de Exposiciones y Congresos</h3>
+          <h3 data-i18n="location.place">Palacio de Exposiciones y Congresos</h3>
           <div class="location__icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <p>Palacio de Exposiciones y Congresos<br/>Cabo de Gata – Ciudad de Almería</p>
+            <p data-i18n-html="location.address_html">Palacio de Exposiciones y Congresos<br/>Cabo de Gata – Ciudad de Almería</p>
           </div>
           <div class="location__icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            <p>25–26 Septiembre 2026<br/>Viernes y Sábado</p>
+            <p data-i18n-html="location.dates_html">25–26 Septiembre 2026<br/>Viernes y Sábado</p>
           </div>
         </div>
       </div>
@@ -302,46 +307,46 @@
   <!-- ========== HOTEL ========== -->
   <section class="hotel" id="hotel">
     <div class="container">
-      <h2 class="section-title">Alojamiento</h2>
-      <p class="section-subtitle">Hotel oficial — justo enfrente del Palacio de Congresos</p>
+      <h2 class="section-title" data-i18n="hotel.title">Alojamiento</h2>
+      <p class="section-subtitle" data-i18n="hotel.subtitle">Hotel oficial — justo enfrente del Palacio de Congresos</p>
 
       <div class="hotel__layout">
         <div class="hotel__card">
           <div class="hotel__info">
           <h3>Cabo Gata Jardín</h3>
-          <p class="hotel__lead">
+          <p class="hotel__lead" data-i18n="hotel.lead">
             Para facilitaros vuestro viaje, os ofrecemos la estancia en el hotel Cabo Gata Jardín,
             situado justo enfrente del lugar del evento. Usa el código que aparece a continuación
             para conseguir un descuento en tu reserva. ¡No te quedes sin tu plaza!
           </p>
 
           <div class="hotel__code">
-            <span class="hotel__code-label">Código promocional</span>
+            <span class="hotel__code-label" data-i18n="hotel.code_label">Código promocional</span>
             <span class="hotel__code-value">WOW2026</span>
           </div>
 
           <ul class="hotel__details">
-            <li>
+            <li data-i18n-html="hotel.detail1_html">
               <strong>20% de descuento</strong> sobre la tarifa elegida
             </li>
-            <li>
+            <li data-i18n-html="hotel.detail2_html">
               Válido para fechas entre el <strong>22 y 28 de septiembre</strong>
             </li>
-            <li>
+            <li data-i18n-html="hotel.detail3_html">
               Reservas a través de la web del hotel: introduce el código en el campo <strong>«promoción»</strong>
             </li>
           </ul>
 
-          <a href="https://www.cabogatajardin.com" target="_blank" rel="noopener" class="btn btn--primary">
+          <a href="https://www.cabogatajardin.com" target="_blank" rel="noopener" class="btn btn--primary" data-i18n="hotel.cta">
             Haz tu reserva
           </a>
 
-          <p class="hotel__note">
+          <p class="hotel__note" data-i18n="hotel.note">
             * Información facilitada directamente por el hotel. La reserva, el pago y las condiciones se gestionan exclusivamente con Cabo Gata Jardín.
           </p>
           </div>
         </div>
-        <img class="hotel__image" src="assets/images/hotel_cabo_gata_jardin.jpeg" alt="Hotel Cabo Gata Jardín — Almería" />
+        <img class="hotel__image" src="assets/images/hotel_cabo_gata_jardin.jpeg" alt="Hotel Cabo Gata Jardín — Almería" data-i18n-alt="hotel.image_alt" />
       </div>
     </div>
   </section>
@@ -349,18 +354,18 @@
   <!-- ========== REGISTRO ========== -->
   <section class="register" id="register">
     <div class="container">
-      <h2 class="section-title">Inscríbete</h2>
-      <p class="section-subtitle">Las plazas son limitadas — reserva la tuya</p>
+      <h2 class="section-title" data-i18n="register.title">Inscríbete</h2>
+      <p class="section-subtitle" data-i18n="register.subtitle">Las plazas son limitadas — reserva la tuya</p>
       <p class="register__verse">
-        «Bienaventurado el hombre que halla la sabiduría, y que obtiene la inteligencia.»
-        <br />— Proverbios 3:13
+        <span data-i18n="register.verse">«Bienaventurado el hombre que halla la sabiduría, y que obtiene la inteligencia.»</span>
+        <br /><span data-i18n="register.verse_ref">— Proverbios 3:13</span>
       </p>
-      <form class="register__form" onsubmit="event.preventDefault(); alert('¡Gracias por tu interés! Te contactaremos pronto.');">
-        <input type="text" placeholder="Tu nombre completo" required />
-        <input type="email" placeholder="Tu correo electrónico" required />
-        <input type="tel" placeholder="Teléfono (opcional)" />
-        <input type="text" placeholder="Iglesia / Ciudad" />
-        <button type="submit" class="btn btn--primary">Enviar Inscripción</button>
+      <form class="register__form">
+        <input type="text" placeholder="Tu nombre completo" data-i18n-placeholder="register.placeholder.name" required />
+        <input type="email" placeholder="Tu correo electrónico" data-i18n-placeholder="register.placeholder.email" required />
+        <input type="tel" placeholder="Teléfono (opcional)" data-i18n-placeholder="register.placeholder.phone" />
+        <input type="text" placeholder="Iglesia / Ciudad" data-i18n-placeholder="register.placeholder.church" />
+        <button type="submit" class="btn btn--primary" data-i18n="register.button">Enviar Inscripción</button>
       </form>
     </div>
   </section>
@@ -373,13 +378,14 @@
         <a href="#" aria-label="Facebook">📘</a>
         <a href="#" aria-label="Email">✉️</a>
       </div>
-      <p>&copy; 2026 WOW — Woman of Wisdom &middot; Almería, España</p>
-      <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+      <p data-i18n="footer.copyright">&copy; 2026 WOW — Woman of Wisdom &middot; Almería, España</p>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem;" data-i18n="footer.tagline">
         Un evento para la gloria de Dios
       </p>
     </div>
   </footer>
 
+  <script src="js/i18n.js?v=2026-04-27g"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
