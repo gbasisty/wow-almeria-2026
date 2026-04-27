@@ -500,6 +500,117 @@ ul {
   margin-top: 2px;
 }
 
+/* ---------- Hotel ---------- */
+.hotel {
+  padding: var(--section-padding);
+  background: var(--off-white);
+}
+
+.hotel__layout {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.hotel__card {
+  background: #fff;
+  border: 1px solid #ece4d6;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(91, 42, 110, 0.06);
+}
+
+.hotel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 4px 20px rgba(91, 42, 110, 0.06);
+}
+
+.hotel__info h3 {
+  font-family: var(--font-heading);
+  color: var(--purple);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hotel__lead {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.hotel__code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+  color: var(--white);
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.hotel__code-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.hotel__code-value {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.hotel__details {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.hotel__details li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.hotel__details li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.hotel__info .btn {
+  display: block;
+  width: fit-content;
+  margin: 0.5rem auto 0;
+}
+
+.hotel__note {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 1.5rem;
+  line-height: 1.5;
+}
+
 /* ---------- Registro / CTA ---------- */
 .register {
   padding: var(--section-padding);
@@ -624,5 +735,23 @@ ul {
 
   .hero__title {
     font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .hotel__layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hotel__card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .hotel__image {
+    order: -1;
+    max-height: 260px;
+  }
+
+  .hotel__code-value {
+    font-size: 1.6rem;
   }
 }
