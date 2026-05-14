@@ -11,14 +11,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=2026-04-27i" />
+  <link rel="stylesheet" href="css/styles.css?v=2026-05-14g" />
 </head>
 <body>
 
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar">
     <div class="container">
-      <a href="#" class="navbar__logo">WOW <span>Almería</span></a>
+      <a href="#" class="navbar__logo">WOW26</a>
 
       <ul class="navbar__links">
         <li><a href="#about" data-i18n="nav.about">Acerca de</a></li>
@@ -29,22 +29,31 @@
         <li><a href="#register" class="btn btn--primary" data-i18n="nav.register">Inscríbete</a></li>
       </ul>
 
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-switch__btn" data-lang="es" aria-pressed="true">ES</button>
+        <span class="lang-switch__sep" aria-hidden="true">/</span>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
       <button class="navbar__toggle" aria-label="Abrir menú" data-i18n-aria-label="nav.toggle_aria">
         <span></span><span></span><span></span>
       </button>
-    </div>
-    <div class="lang-switch" role="group" aria-label="Language">
-      <button type="button" class="lang-switch__btn" data-lang="es" aria-pressed="true">ES</button>
-      <span class="lang-switch__sep" aria-hidden="true">/</span>
-      <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
     </div>
   </nav>
 
   <!-- ========== HERO ========== -->
   <header class="hero" id="hero">
     <div class="hero__content">
-      <p class="hero__overline" data-i18n="hero.overline">Conferencia de Mujeres</p>
-      <h1 class="hero__title">WOW</h1>
+      <h1 class="hero__title">
+        <img
+          class="hero__logo"
+          src="assets/images/logo_wow.png"
+          alt="WOW — Woman of Wisdom"
+          data-i18n-alt="hero.logo_alt"
+          width="320"
+          height="320"
+        />
+      </h1>
       <p class="hero__meaning" data-i18n="hero.meaning">Mujeres en Libertad</p>
       <p class="hero__verse">
         <span data-i18n="hero.verse">«Porque el Señor da la sabiduría; de su boca viene el conocimiento y la inteligencia.»</span>
@@ -82,11 +91,11 @@
 
           <div class="about__highlights">
             <div>
-              <span>3</span>
+              <span>2</span>
               <small data-i18n="about.h_days">Días</small>
             </div>
             <div>
-              <span>9</span>
+              <span>5</span>
               <small data-i18n="about.h_talks">Ponencias</small>
             </div>
             <div>
@@ -103,42 +112,56 @@
   <section class="schedule" id="schedule">
     <div class="container">
       <h2 class="section-title" data-i18n="schedule.title">Programa</h2>
-      <p class="section-subtitle" data-i18n="schedule.subtitle">24 de septiembre (pre-evento) · 25 y 26 de septiembre (conferencia)</p>
+      <p class="section-subtitle" data-i18n="schedule.subtitle">25 y 26 de septiembre · Conferencia WOW26</p>
 
       <div class="schedule__timeline">
-        <!-- Pre-evento -->
-        <h3 style="font-family: var(--font-heading); color: var(--purple); margin-bottom: 1rem;" data-i18n="schedule.preevent_heading">Pre-evento — Jueves 24 de septiembre</h3>
+        <!-- Día 1 -->
+        <h3 style="font-family: var(--font-heading); color: var(--purple); margin-bottom: 1rem;" data-i18n="schedule.day1_heading">Viernes 25 de septiembre</h3>
         <div class="schedule__item">
-          <div class="schedule__time">17:00</div>
+          <div class="schedule__time">10:00</div>
           <div class="schedule__info">
             <h4 data-i18n="schedule.registration_h">Inscripciones</h4>
             <p data-i18n="schedule.registration_p">Registro y acreditación de asistentes</p>
           </div>
         </div>
         <div class="schedule__item">
-          <div class="schedule__time">18:30</div>
+          <div class="schedule__time">11:00</div>
           <div class="schedule__info">
-            <h4 data-i18n="schedule.welcome_h">Reunión de Bienvenida</h4>
+            <h4 data-i18n="schedule.presentation_h">Presentación</h4>
             <p data-i18n="schedule.welcome_p">Apertura oficial del WOW Conference 2026</p>
           </div>
         </div>
         <div class="schedule__item schedule__item--featured">
-          <div class="schedule__time">19:00</div>
+          <div class="schedule__time">11:30</div>
           <div class="schedule__info">
-            <h4 data-i18n="schedule.plenary_h">Plenaria</h4>
+            <h4 data-i18n="schedule.session1_h">Sesión 1</h4>
+            <p>Rev. Celia Apeagyei-Collins</p>
+          </div>
+        </div>
+        <div class="schedule__item">
+          <div class="schedule__time">13:00</div>
+          <div class="schedule__info">
+            <h4 data-i18n="schedule.lunch_h">Almuerzo</h4>
+            <p data-i18n="schedule.lunch_p">Libre</p>
+          </div>
+        </div>
+        <div class="schedule__item schedule__item--featured">
+          <div class="schedule__time">18:00</div>
+          <div class="schedule__info">
+            <h4 data-i18n="schedule.session2_h">Sesión 2</h4>
             <p>Ps. Daphne Yang</p>
           </div>
         </div>
         <div class="schedule__item">
           <div class="schedule__time">20:00</div>
           <div class="schedule__info">
-            <h4 data-i18n="schedule.farewell_h">Despedida</h4>
-            <p data-i18n="schedule.farewell_p">Cierre de la primera jornada</p>
+            <h4 data-i18n="schedule.endday1_h">Fin del evento</h4>
+            <p>&nbsp;</p>
           </div>
         </div>
 
-        <!-- Día 1 -->
-        <h3 style="font-family: var(--font-heading); color: var(--purple); margin: 2rem 0 1rem;" data-i18n="schedule.day1_heading">Día 1 — Viernes 25 de septiembre</h3>
+        <!-- Día 2 -->
+        <h3 style="font-family: var(--font-heading); color: var(--purple); margin: 2rem 0 1rem;" data-i18n="schedule.day2_heading">Sábado 26 de septiembre</h3>
         <div class="schedule__item schedule__item--featured">
           <div class="schedule__time">10:00</div>
           <div class="schedule__info">
@@ -149,7 +172,7 @@
         <div class="schedule__item">
           <div class="schedule__time">11:30</div>
           <div class="schedule__info">
-            <h4 data-i18n="schedule.break_h">Pausa</h4>
+            <h4 data-i18n="schedule.break_h">Pausa café</h4>
             <p data-i18n="schedule.break_p">Café y refrigerio</p>
           </div>
         </div>
@@ -163,78 +186,15 @@
         <div class="schedule__item">
           <div class="schedule__time">13:30</div>
           <div class="schedule__info">
-            <h4 data-i18n="schedule.lunch_h">Pausa para almuerzo</h4>
+            <h4 data-i18n="schedule.lunch_h">Almuerzo</h4>
             <p data-i18n="schedule.lunch_p">Libre</p>
           </div>
         </div>
         <div class="schedule__item schedule__item--featured">
           <div class="schedule__time">18:00</div>
-          <div class="schedule__info">
-            <h4 data-i18n="schedule.evening_h">Reunión Nocturna Abierta</h4>
-            <p data-i18n="schedule.evening_p">Ps. Daphne Yang · Abierto a todos</p>
-          </div>
-        </div>
-        <div class="schedule__item">
-          <div class="schedule__time">20:00</div>
-          <div class="schedule__info">
-            <h4 data-i18n="schedule.endday1_h">Fin del Día 1</h4>
-            <p>&nbsp;</p>
-          </div>
-        </div>
-
-        <!-- Día 2 -->
-        <h3 style="font-family: var(--font-heading); color: var(--purple); margin: 2rem 0 1rem;" data-i18n="schedule.day2_heading">Día 2 — Sábado 26 de septiembre</h3>
-        <div class="schedule__item schedule__item--featured">
-          <div class="schedule__time">10:00</div>
           <div class="schedule__info">
             <h4 data-i18n="schedule.session3_h">Sesión 3</h4>
-            <p>Ps. Juliette Medina Maury</p>
-          </div>
-        </div>
-        <div class="schedule__item">
-          <div class="schedule__time">11:30</div>
-          <div class="schedule__info">
-            <h4 data-i18n="schedule.break_h">Pausa</h4>
-            <p data-i18n="schedule.break_p">Café y refrigerio</p>
-          </div>
-        </div>
-        <div class="schedule__item schedule__item--featured">
-          <div class="schedule__time">12:00</div>
-          <div class="schedule__info">
-            <h4 data-i18n="schedule.session4_h">Sesión 4</h4>
-            <p>Ps. Juliette Medina Maury</p>
-          </div>
-        </div>
-        <div class="schedule__item">
-          <div class="schedule__time">13:30</div>
-          <div class="schedule__info">
-            <h4 data-i18n="schedule.lunch_h">Pausa para almuerzo</h4>
-            <p data-i18n="schedule.lunch_p">Libre</p>
-          </div>
-        </div>
-        <div class="schedule__item schedule__item--featured">
-          <div class="schedule__time">18:00</div>
-          <div class="schedule__info">
-            <h4 data-i18n="schedule.evening_h">Reunión Nocturna Abierta</h4>
-            <p data-i18n="schedule.evening_p">Ps. Daphne Yang · Abierto a todos</p>
-          </div>
-        </div>
-        <div class="schedule__item">
-          <div class="schedule__time">20:00</div>
-          <div class="schedule__info">
-            <h4 data-i18n="schedule.endconf_h">Fin de la Conferencia</h4>
-            <p>&nbsp;</p>
-          </div>
-        </div>
-
-        <!-- Culto especial -->
-        <h3 style="font-family: var(--font-heading); color: var(--purple-light); margin: 2rem 0 0.5rem;" data-i18n="schedule.sunday_heading">Domingo 27 de septiembre</h3>
-        <p style="font-size: 0.85rem; color: #999; margin-bottom: 1rem; font-style: italic;" data-i18n="schedule.unofficial_note">Fuera del programa oficial del WOW Conference</p>
-        <div class="schedule__item">
-          <div class="schedule__time">11:00</div>
-          <div class="schedule__info">
-            <h4 data-i18n="schedule.celebration_h">Culto de Celebración</h4>
-            <p data-i18n="schedule.celebration_p">Rev. Celia Apeagyei-Collins · Ps. Daphne Yang · Abierto a todos</p>
+            <p>Ps. Daphne Yang</p>
           </div>
         </div>
       </div>
@@ -360,13 +320,22 @@
         <span data-i18n="register.verse">«Bienaventurado el hombre que halla la sabiduría, y que obtiene la inteligencia.»</span>
         <br /><span data-i18n="register.verse_ref">— Proverbios 3:13</span>
       </p>
-      <form class="register__form">
-        <input type="text" placeholder="Tu nombre completo" data-i18n-placeholder="register.placeholder.name" required />
-        <input type="email" placeholder="Tu correo electrónico" data-i18n-placeholder="register.placeholder.email" required />
-        <input type="tel" placeholder="Teléfono (opcional)" data-i18n-placeholder="register.placeholder.phone" />
-        <input type="text" placeholder="Iglesia / Ciudad" data-i18n-placeholder="register.placeholder.church" />
-        <button type="submit" class="btn btn--primary" data-i18n="register.button">Enviar Inscripción</button>
-      </form>
+
+      <div class="register__cta">
+        <p class="register__lead" data-i18n="register.lead">
+          Las inscripciones se gestionan de forma segura a través de Rezerva. Reserva tu plaza en menos de un minuto.
+        </p>
+        <a
+          href="https://rezerva.es/e/0ba4dd4e-f942-446e-b711-d24a19d2d560"
+          class="btn btn--primary register__btn"
+          target="_blank"
+          rel="noopener"
+          data-i18n="register.button"
+        >Reservar mi plaza</a>
+        <p class="register__note" data-i18n="register.note">
+          Se abrirá Rezerva.es en una pestaña nueva.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -385,7 +354,7 @@
     </div>
   </footer>
 
-  <script src="js/i18n.js?v=2026-04-27g"></script>
+  <script src="js/i18n.js?v=2026-05-14c"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
